@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>{{post.title}} - BLOG</title>
 </head>
 <body>
-    <h1>Blog</h1>
-
-    {%for p in posts%}
-        <hr/>
-        <h2><a href="{{p.get_absolute_url}}">{{ p.title }}</a></h2>
-        <h5>{{p.created_at}}</h5>
-        <p> {{p.content}}</p>
-    {% endfor %}
+    <nav><a href="/blog">BLOG</a></nav>
+    <h1>{{post.title}}</h1>
+    <h4>{{post.created_at}}</h4>
+    <p>{{post.content}}</p>
+    <hr>
+    <h3>댓글!</h3>
 </body>
 </html>
